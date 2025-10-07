@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Três Barras Rural - Galinhas e Ovos Caipira</title>
+    <meta name="description" content="Criação sustentável de galinhas caipiras em Santa Catarina. Ovos frescos, frangos caipiras, pintinhos e codornas direto do produtor.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Botão de Acessibilidade -->
+    <button id="accessibility-btn" class="accessibility-btn" aria-label="Opções de acessibilidade">
+        <span aria-hidden="true">♿</span>
+    </button>
+
+    <!-- Menu de Acessibilidade -->
+    <div id="accessibility-menu" class="accessibility-menu" role="dialog" aria-labelledby="accessibility-title" aria-hidden="true">
+        <h3 id="accessibility-title">Opções de Acessibilidade</h3>
+        <button id="increase-font" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button id="decrease-font" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button id="high-contrast" aria-label="Ativar alto contraste">Alto Contraste</button>
+        <button id="close-accessibility" aria-label="Fechar menu de acessibilidade">×</button>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/Logo tres barras rural.png" alt="Logo Três Barras Rural" class="logo-img">
+                    <h1>Três Barras Rural</h1>
+                </div>
+                <nav role="navigation" aria-label="Menu principal">
+                    <ul>
+                        <li><a href="#home" aria-current="page">Home</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="#treinamento">Treinamento</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="cart-container">
+                    <button id="cart-btn" class="cart-btn" aria-label="Carrinho de compras">
+                        🛒 <span id="cart-count" class="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Carrinho de Compras (Modal) -->
+    <div id="cart-modal" class="cart-modal" role="dialog" aria-labelledby="cart-title" aria-hidden="true">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2 id="cart-title">Carrinho de Compras</h2>
+                <button id="close-cart" class="close-btn" aria-label="Fechar carrinho">×</button>
+            </div>
+            <div id="cart-items" class="cart-items">
+                <!-- Itens do carrinho serão inseridos aqui via JavaScript -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total: R$ <span id="cart-total">0,00</span></strong>
+                </div>
+                <button id="checkout-btn" class="btn btn-primary">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Seção Home -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <p class="hero-subtitle">100% Natural da Mata Atlântica</p>
+                        <h2>Ovos e Frangos <span class="highlight">Caipira</span> de Três Barras</h2>
+                        <p class="hero-description">Criação sustentável e natural em Santa Catarina. Produtos frescos, saudáveis e com o sabor autêntico do campo.</p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary">Comprar Agora</button>
+                            <button class="btn btn-secondary">WhatsApp</button>
+                        </div>
+                        <div class="rating">
+                            <span class="stars" aria-label="Avaliação 4.9 de 5 estrelas">⭐ 4.9/5</span>
+                            <span>Avaliação dos clientes</span>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="images/galinhas_caipiras_livres.jpg" alt="Galinhas caipiras criadas livres no campo com ovos frescos">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre" class="about">
+            <div class="container">
+                <h2>Nossa História em Três Barras</h2>
+                <p class="section-subtitle">Localizado no coração da Mata Atlântica de Santa Catarina, nosso criatório combina tradição familiar com práticas sustentáveis modernas.</p>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Sustentabilidade na Mata Atlântica</h3>
+                        <p>Em Três Barras, município com 100% de cobertura da Mata Atlântica, desenvolvemos um sistema de criação que respeita o meio ambiente e promove o bem-estar animal. Nossas galinhas vivem livres, alimentando-se naturalmente e contribuindo para a preservação do ecossistema local.</p>
+                        
+                        <div class="features">
+                            <div class="feature">
+                                <div class="feature-icon" aria-hidden="true">🏆</div>
+                                <div class="feature-content">
+                                    <h4>Tradição Familiar</h4>
+                                    <p>Qualidade garantida</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-icon" aria-hidden="true">🌱</div>
+                                <div class="feature-content">
+                                    <h4>100% Sustentável</h4>
+                                    <p>Práticas ecológicas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/criacao de Deus.jpg" alt="Vista aérea da Mata Atlântica em Três Barras mostrando a preservação ambiental">
+                    </div>
+                </div>
+
+                <div class="values">
+                    <div class="value-item">
+                        <div class="value-icon" aria-hidden="true">❤️</div>
+                        <h4>Bem-estar Animal</h4>
+                        <p>Criação livre e natural, respeitando o comportamento natural das aves.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon" aria-hidden="true">🌿</div>
+                        <h4>Sustentabilidade</h4>
+                        <p>Práticas ecológicas que preservam a Mata Atlântica local.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon" aria-hidden="true">🏅</div>
+                        <h4>Qualidade</h4>
+                        <p>Produtos frescos e nutritivos, direto do produtor para sua mesa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Produtos -->
+        <section id="produtos" class="products">
+            <div class="container">
+                <h2>Nossos Produtos</h2>
+                <p class="section-subtitle">Produtos frescos e naturais, direto do nosso criatório em Três Barras para sua mesa.</p>
+                
+                <div class="products-grid">
+                    <div class="product-card" data-product-id="1">
+                        <div class="product-image">
+                            <img src="images/ovos1.webp" alt="Ovos caipiras frescos em embalagem sustentável">
+                            <span class="product-category">Ovos</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Ovos Caipira - Dúzia</h3>
+                            <p>Ovos frescos de galinhas criadas livres na Mata Atlântica</p>
+                            <div class="product-price">R$ 12,90</div>
+                            <button class="btn btn-primary add-to-cart" data-product='{"id": 1, "name": "Ovos Caipira - Dúzia", "price": 12.90, "image": "images/products_screenshot.png"}'>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-product-id="2">
+                        <div class="product-image">
+                            <img src="images/Galinhas-Poedeiras-2.jpg" alt="Frango caipira criado livre no campo">
+                            <span class="product-category">Frangos</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Frango Caipira Inteiro</h3>
+                            <p>Frango caipira criado livre, aproximadamente 2kg</p>
+                            <div class="product-price">R$ 28,90</div>
+                            <button class="btn btn-primary add-to-cart" data-product='{"id": 2, "name": "Frango Caipira Inteiro", "price": 28.90, "image": "images/galinha_caipira.jpg"}'>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-product-id="3">
+                        <div class="product-image">
+                            <img src="images/pintinhos.jpg" alt="Pintinhos caipiras recém-nascidos">
+                            <span class="product-category">Pintinhos</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Pintinhos Caipira</h3>
+                            <p>Pintinhos de 1 dia, raça caipira selecionada</p>
+                            <div class="product-price">R$ 8,50</div>
+                            <button class="btn btn-primary add-to-cart" data-product='{"id": 3, "name": "Pintinhos Caipira", "price": 8.50, "image": "images/pintinhos.jpg"}'>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-product-id="4">
+                        <div class="product-image">
+                            <img src="images/codorna1.jpg" alt="Codornas criadas em ambiente natural">
+                            <span class="product-category">Codornas</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Codornas Adultas</h3>
+                            <p>Codornas para postura, criadas naturalmente</p>
+                            <div class="product-price">R$ 15,00</div>
+                            <button class="btn btn-primary add-to-cart" data-product='{"id": 4, "name": "Codornas Adultas", "price": 15.00, "image": "images/codornas.jpg"}'>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-product-id="5">
+                        <div class="product-image">
+                            <img src="images/galo comum2.jpg" alt="Galo caipira reprodutor">
+                            <span class="product-category">Reprodutores</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Galo Reprodutor</h3>
+                            <p>Galo caipira para reprodução, linhagem selecionada</p>
+                            <div class="product-price">R$ 45,00</div>
+                            <button class="btn btn-primary add-to-cart" data-product='{"id": 5, "name": "Galo Reprodutor", "price": 45.00, "image": "images/galo_comum.jpg"}'>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-product-id="6">
+                        <div class="product-image">
+                            <img src="images/garnizé.jpg" alt="Galo garnizé reprodutor">
+                            <span class="product-category">Reprodutores</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Galo Garnizé </h3>
+                            <p>Galo garnizé para reprodução, raça tradicional</p>
+                            <div class="product-price">R$ 50,00</div>
+                            <button class="btn btn-primary add-to-cart" data-product='{"id": 6, "name": "Galo Carijó", "price": 50.00, "image": "images/galo_carijo.jpg"}'>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Seção Treinamento -->
+        <section id="treinamento" class="treinamento">
+            <div class="container">
+                <h2>Treinamentos e Workshops</h2>
+                <p class="section-subtitle">Capacitação para produtores rurais interessados em criação sustentável.</p>
+                
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <h3>Criação de Galinhas Caipiras para Iniciantes</h3>
+                        <div class="course-details">
+                            <p><strong>Duração:</strong> 8 horas</p>
+                            <p><strong>Formato:</strong> Presencial</p>
+                            <p><strong>Público:</strong> Iniciantes</p>
+                        </div>
+                        <p>Aprenda os fundamentos da criação de galinhas caipiras, desde a escolha das aves até o manejo diário.</p>
+                        <button class="btn btn-primary">Inscrever-se</button>
+                    </div>
+                    <div class="course-card">
+                        <h3>Boas Práticas de Manejo</h3>
+                        <div class="course-details">
+                            <p><strong>Duração:</strong> 6 horas</p>
+                            <p><strong>Formato:</strong> Online</p>
+                            <p><strong>Público:</strong> Intermediário</p>
+                        </div>
+                        <p>Técnicas avançadas de manejo para otimizar a produção e garantir o bem-estar animal.</p>
+                        <button class="btn btn-primary">Inscrever-se</button>
+                    </div>
+                    <div class="course-card">
+                        <h3>Produção de Ovos Orgânicos</h3>
+                        <div class="course-details">
+                            <p><strong>Duração:</strong> 12 horas</p>
+                            <p><strong>Formato:</strong> Presencial</p>
+                            <p><strong>Público:</strong> Avançado</p>
+                        </div>
+                        <p>Certificação e técnicas para produção de ovos orgânicos seguindo normas ambientais.</p>
+                        <button class="btn btn-primary">Inscrever-se</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção FAQ -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2>Perguntas Frequentes</h2>
+                <p class="section-subtitle">Encontre respostas para suas dúvidas sobre nossos produtos e serviços.</p>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+                            <span>Como são criadas as galinhas caipiras?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq-1" class="faq-answer" aria-hidden="true">
+                            <p>Nossas galinhas são criadas livres na Mata Atlântica, com acesso a pastagem natural, alimentação balanceada sem hormônios e antibióticos, respeitando o comportamento natural das aves.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+                            <span>Qual a diferença entre ovos caipiras e ovos convencionais?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq-2" class="faq-answer" aria-hidden="true">
+                            <p>Os ovos caipiras têm gemas mais amareladas, sabor mais intenso e maior valor nutricional devido à alimentação natural das galinhas e ao acesso ao pasto.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+                            <span>Fazem entrega?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq-3" class="faq-answer" aria-hidden="true">
+                            <p>Sim, fazemos entregas na região de Três Barras e cidades próximas. Entre em contato para verificar disponibilidade na sua região.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+                            <span>Como posso visitar o criatório?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq-4" class="faq-answer" aria-hidden="true">
+                            <p>Oferecemos visitas técnicas agendadas. Entre em contato conosco para agendar sua visita e conhecer nossas instalações e práticas sustentáveis.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+                            <span>Vocês oferecem consultoria para outros produtores?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div id="faq-5" class="faq-answer" aria-hidden="true">
+                            <p>Sim, oferecemos consultoria especializada em criação de aves caipiras, manejo sustentável e planejamento de instalações. Veja mais detalhes na seção Consultoria.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato" class="contato">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p class="section-subtitle">Estamos prontos para atendê-lo. Fale conosco!</p>
+                
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <h3>Envie sua Mensagem</h3>
+                        <form id="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name">Nome *</label>
+                                <input type="text" id="name" name="name" required aria-describedby="name-error">
+                                <span id="name-error" class="error-message" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" required aria-describedby="email-error">
+                                <span id="email-error" class="error-message" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefone</label>
+                                <input type="tel" id="phone" name="phone" aria-describedby="phone-help">
+                                <span id="phone-help" class="help-text">Opcional - para contato mais rápido</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Assunto *</label>
+                                <select id="subject" name="subject" required aria-describedby="subject-error">
+                                    <option value="">Selecione um assunto</option>
+                                    <option value="produtos">Produtos</option>
+                                    <option value="treinamento">Treinamento</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+                                <span id="subject-error" class="error-message" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensagem *</label>
+                                <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+                                <span id="message-error" class="error-message" role="alert"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3>Informações de Contato</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">📍</div>
+                            <div>
+                                <strong>Endereço</strong>
+                                <p>Três Barras, São Cristovão<br>Santa Catarina</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">📞</div>
+                            <div>
+                                <strong>Telefone</strong>
+                                <p><a href="tel:+5547989140509">(47) 989140509</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">✉️</div>
+                            <div>
+                                <strong>E-mail</strong>
+                                <p><a href="mailto:contato@tresbarrasrural.com.br">contato@tresbarrasrural.com.br</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">🕒</div>
+                            <div>
+                                <strong>Horário de Atendimento</strong>
+                                <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-media">
+                            <h4>Redes Sociais</h4>
+                            <div class="social-links">
+                                <a href="#" aria-label="Facebook da Três Barras Rural">📘</a>
+                                <a href="#" aria-label="Instagram da Três Barras Rural">📷</a>
+                                <a href="#" aria-label="WhatsApp da Três Barras Rural">💬</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Três Barras Rural</h4>
+                    <p>Criação sustentável de aves caipiras na Mata Atlântica de Santa Catarina.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>📞 (47) 989140509</p>
+                    <p>✉️ contato@tresbarrasrural.com.br</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Três Barras Rural. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
